@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/questionButton"
+        android:layout_width="137dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:text="Descarca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextQuestionNumber"
+        app:layout_constraintTop_toTopOf="@+id/editTextQuestionNumber" />
+
+    <EditText
+        android:id="@+id/editTextQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Numar intrebari"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfQuestionsLabel" />
+
+    <TextView
+        android:id="@+id/noOfQuestionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Numar intrebari"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextQuestionNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intrebari:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuestionNumber" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loadingImageView"
+        android:layout_width="145dp"
+        android:layout_height="153dp"
+        android:src="@drawable/loading"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionsLabel"
+        app:layout_constraintVertical_bias="0.128"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewQuestions"
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:nestedScrollingEnabled="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionsLabel"
+        app:layout_constraintVertical_bias="0.141"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

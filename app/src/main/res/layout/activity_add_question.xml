@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQuestionActivity">
+
+    <TextView
+        android:id="@+id/questionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Intrebare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/questionEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introdu intrebarea"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="@+id/questionLabel"
+        app:layout_constraintTop_toBottomOf="@+id/questionLabel" />
+
+    <TextView
+        android:id="@+id/questionAnswerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Raspuns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionEditText" />
+
+    <EditText
+        android:id="@+id/questionAnswerEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introdu raspunsul"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="@+id/questionAnswerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/questionAnswerLabel" />
+
+    <TextView
+        android:id="@+id/questionValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Valoare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionAnswerEditText" />
+
+    <EditText
+        android:id="@+id/questionValueEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introdu valoarea"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/questionValueLabel"
+        app:layout_constraintTop_toBottomOf="@+id/questionValueLabel" />
+
+    <TextView
+        android:id="@+id/questionCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Categorie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionValueEditText" />
+
+    <EditText
+        android:id="@+id/questionCategoryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introdu categoria"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/questionCategoryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/questionCategoryLabel" />
+
+    <TextView
+        android:id="@+id/errorQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesar"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="@+id/questionEditText"
+        app:layout_constraintTop_toBottomOf="@+id/questionEditText" />
+
+    <TextView
+        android:id="@+id/errorAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesar"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="@+id/questionAnswerEditText"
+        app:layout_constraintTop_toBottomOf="@+id/questionAnswerEditText" />
+
+    <TextView
+        android:id="@+id/errorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesar"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="@+id/questionValueEditText"
+        app:layout_constraintTop_toBottomOf="@+id/questionValueEditText" />
+
+    <TextView
+        android:id="@+id/errorCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesar"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="@+id/questionCategoryEditText"
+        app:layout_constraintTop_toBottomOf="@+id/questionCategoryEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

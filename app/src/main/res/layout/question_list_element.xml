@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/questionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title of the question" />
+
+        <TextView
+            android:id="@+id/questionAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer of the question" />
+
+        <TextView
+            android:id="@+id/questionValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Value of the question" />
+
+        <TextView
+            android:id="@+id/questionCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question created at" />
+
+        <TextView
+            android:id="@+id/questionCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question category title" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
