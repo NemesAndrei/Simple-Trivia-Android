@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aehimn.assignmenttwo.R
 import com.aehimn.assignmenttwo.model.Question
 
-class QuestionAdapter(val questionsList: ArrayList<Question>) :
+class QuestionAdapter(private val questionsList: ArrayList<Question>) :
     RecyclerView.Adapter<QuestionAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,18 +34,18 @@ class QuestionAdapter(val questionsList: ArrayList<Question>) :
         val questionElement: Question = questionsList[position];
 
         val question = viewHolder.question;
-        question.text = "INTREBARE: " + questionElement.question;
+        "INTREBARE: ${questionElement.question}".also { question.text = it };
 
         val questionAnswer = viewHolder.questionAnswer;
-        questionAnswer.text = "RASPUNS: " + questionElement.answer;
+        "RASPUNS: ${questionElement.answer}".also { questionAnswer.text = it };
 
         val questionValue = viewHolder.questionValue;
-        questionValue.text = "VALOARE: " + questionElement.value.toString();
+        "VALOARE: ${questionElement.value}".also { questionValue.text = it };
 
         val questionCreated = viewHolder.questionCreated;
         questionCreated.text = "CREATA LA: " + questionElement.created_at;
 
         val questionCategoryTitle = viewHolder.questionCategoryTitle;
-        questionCategoryTitle.text = "CATEGORIE: " + questionElement.categoryTitle;
+        questionCategoryTitle.text = "CATEGORIE: ${questionElement.categoryTitle}";
     }
 }

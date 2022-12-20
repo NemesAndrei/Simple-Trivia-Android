@@ -30,7 +30,7 @@ class AddQuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun validQuestion(): String? {
+    private fun validQuestion(): String {
         val questionText = binding.questionEditText.text.toString();
         if (questionText.isEmpty()) {
             return "Necesar";
@@ -49,7 +49,7 @@ class AddQuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun validAnswer(): String? {
+    private fun validAnswer(): String {
         val answerText = binding.questionAnswerEditText.text.toString();
         if (answerText.isEmpty()) {
             return "Necesar";
@@ -68,7 +68,7 @@ class AddQuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun validValue(): String? {
+    private fun validValue(): String {
         val valueText = binding.questionValueEditText.text.toString();
         if (valueText.isNotEmpty()) {
             val number = valueText.toInt();
@@ -89,7 +89,7 @@ class AddQuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun validCategory(): String? {
+    private fun validCategory(): String {
         val categoryText = binding.questionCategoryEditText.text.toString();
         if (categoryText.isNotEmpty()) {
             if (categoryText != "Muzica" && categoryText != "Geografie" && categoryText != "Istorie" && categoryText != "Personalitati") {
@@ -104,13 +104,18 @@ class AddQuestionActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
+
         builder.setTitle("Salvati intrebarea?");
+
         builder.setMessage("Sunteti pe cale sa parasiti pagina de creare a unei noi intrebari. Doriti sa o salvati?");
-        builder.setPositiveButton("DA", DialogInterface.OnClickListener() { dialogInterface, i ->
+
+        builder.setPositiveButton("DA") { _, _ ->
+
             val validQuestion = binding.errorQuestion.text == "";
             val validAnswer = binding.errorAnswer.text == "";
             val validValue = binding.errorValue.text == "";
             val validCategory = binding.errorCategory.text == "";
+
             if (validQuestion && validAnswer && validValue && validCategory) {
                 val intent = Intent();
                 intent.putExtra("question", binding.questionEditText.text.toString());
@@ -127,12 +132,12 @@ class AddQuestionActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show();
             }
-        })
-        builder.setNegativeButton("NU", DialogInterface.OnClickListener() { dialogInterface, i ->
+        }
+        builder.setNegativeButton("NU") { _, _ ->
             val intent = Intent();
             setResult(RESULT_CANCELED, intent);
             finish();
-        })
+        }
         builder.create().show();
     }
 }
