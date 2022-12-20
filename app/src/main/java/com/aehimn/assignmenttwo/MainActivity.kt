@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 loadingAnimation.visibility = View.VISIBLE;
                 questionAdapter.notifyItemRangeRemoved(0, questionsList.size);
                 questionsList.removeAll(questionsList.toSet());
-                object : CountDownTimer(2000, 2000) {
+                object : CountDownTimer(3000, 2000) {
                     override fun onTick(millisUntilFinished: Long) {
                     }
 
